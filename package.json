@@ -1,13 +1,17 @@
 {
+    "homepage": "https://swstevens.github.io/projects",
     "name": "blank-react-js-template",
     "version": "1.0.0",
     "description": "",
     "keywords": [],
     "main": "src/index.js",
     "dependencies": {
-      "react": "16.12.0",
-      "react-dom": "16.12.0",
-      "react-scripts": "3.0.1"
+      "react": "18.2.0",
+      "react-dom": "^18.2.0",
+      "react-scripts": "3.0.1",
+      "@react-three/drei": "9.91.0",
+      "three": "0.159.0",
+      "@react-three/fiber": "8.15.12"
     },
     "devDependencies": {
       "typescript": "3.8.3"
@@ -16,7 +20,9 @@
       "start": "react-scripts start",
       "build": "react-scripts build",
       "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject"
+      "eject": "react-scripts eject",
+      "predeploy": "yarn run build",
+      "deploy": "gh-pages -b master -d build"
     },
     "browserslist": [
       ">0.2%",
